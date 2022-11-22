@@ -1,0 +1,42 @@
+.container {
+    height: 83.1%;
+}
+
+i {
+    margin-right: 1rem;
+}
+
+button {
+    margin: 1rem auto 0 1rem;
+}
+
+.expansion {
+    background-color: #0c0b0b;
+    width: 180px;
+}
+
+.expansion a {
+    color: rgb(18, 180, 80);
+}
+
+.expansion i {
+    padding-right: 10px;
+}
+
+.titulo {
+    color: rgb(18, 180, 80);
+}
+
+.material-icons {
+    color: rgb(18, 180, 80);
+}
+
+.content {
+    padding: 16px;
+    background-color: #fff;
+}
+
+.sidenav{
+    background-color: #0c0b0b;
+    width: 145px;
+}

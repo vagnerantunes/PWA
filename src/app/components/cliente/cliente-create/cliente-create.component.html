@@ -1,0 +1,59 @@
+<mat-card>
+    <mat-card-title>Novo Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.cliNome" name="cliNome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tipo" [(ngModel)]="cliente.cliTipo" name="cliTipo">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF/CNPJ" [(ngModel)]="cliente.cliCpfCnpj" name="cliCpfCnpj">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="example-form-field">
+            <mat-label>Data chegada</mat-label>
+            <input matInput placeholder="Chegada" [(ngModel)]="cliente.cliDataNascimento" name="cliDataNascimento" [matDatepicker]="datepicker">
+            <mat-hint>DD/MM//YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                  <button mat-button matDatepickerCancel>Cancel</button>
+                  <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                </mat-datepicker-actions>
+              </mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Contato" [(ngModel)]="cliente.cliContato" name="cliContato">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="cliente.cliEmail" name="cliEmail">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Razão Social" [(ngModel)]="cliente.cliRazaoSocial" name="cliRazaoSocial">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome Fantasia" [(ngModel)]="cliente.cliNomeFantasia" name="cliNomeFantasia">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="cliente.cliEndereco" name="cliEndereco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Segmento" [(ngModel)]="cliente.cliSegmento" name="cliSegmento">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Flag" [(ngModel)]="cliente.cliFlag" name="cliFlag">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="createCliente()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>

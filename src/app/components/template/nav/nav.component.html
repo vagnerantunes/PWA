@@ -1,0 +1,55 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <mat-nav-list class="nav-list">
+
+            <mat-expansion-panel hideToggle mat-list-item class="expansion">
+                <mat-expansion-panel-header>
+                    <i class="material-icons">
+                            add_shopping_cart
+                    </i>
+                    <mat-panel-title class="titulo">
+                        <strong>Operações</strong>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!--
+                <a routerLink="/amostras">Amostras</a><br><br>
+                <a routerLink="/ranalises">Resutado de Análise</a>
+                -->
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle mat-list-item class="expansion">
+                <mat-expansion-panel-header>
+                    <i class="material-icons">
+                        paid
+                    </i>
+                    <mat-panel-title class="titulo">
+                        <strong>Financeiro</strong>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <a routerLink="/pagamentos">Forma de pagamento</a>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel hideToggle mat-list-item class="expansion">
+                <mat-expansion-panel-header>
+                    <i class="material-icons">
+                        people
+                    </i>
+                    <mat-panel-title class="titulo">
+                        <strong>Cadastros</strong>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <a routerLink="/usuarios">Usuários</a><br><br>
+                
+                <!-- <a routerLink="/clientes">Clientes</a><br><br>-->
+            </mat-expansion-panel>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>

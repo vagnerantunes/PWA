@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Alterar Usuário</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="usuario.usuNome" name="nome">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Senha" [type]="show ? 'text' : 'password'" [(ngModel)]="usuario.usuSenha" name="senha">            
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Flag" [(ngModel)]="usuario.usuFlag" name="flag">
+        </mat-form-field>        
+        
+    </form>
+
+    <button mat-raised-button (click)="password()">{{show ? 'Esconder senha' : 'Visualizar senha'}}</button>
+
+    <button mat-raised-button (click)="updateUsuario()" color="primary">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="warn">
+        Cancelar
+    </button>
+
+</mat-card>
